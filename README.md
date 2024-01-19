@@ -1,4 +1,4 @@
-<h1>SnapShare - Captured Your Everyday Moments</h1>
+<h1>SnapShare - Capture Your Everyday Moments</h1>
 <b>SnapShare</b> is a vibrant social media platform designed to celebrate and share the beauty of everyday moments through photos. Whether it's a breathtaking sunset, a delicious meal, or a heartwarming smile, SnapShare connects people through the visual stories they create every day.
 <br>
 <br>
