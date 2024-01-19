@@ -57,7 +57,7 @@
 
             <a 
                 href="{{ route('google.redirect') }}" 
-                class="w-[450px] h-12 flex justify-center items-center border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-all duration-200 gap-3 mb-4"
+                class="max-w-[450px] h-12 flex justify-center items-center border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-all duration-200 gap-3 mb-4"
             >
                 <img 
                     src="{{ asset('images/google.svg') }}" 
@@ -70,7 +70,7 @@
             </a>
             <a 
                 href="{{ route('facebook.redirect') }}" 
-                class="w-[450px] h-12 flex justify-center items-center border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-all duration-200 gap-3 mb-8"
+                class="max-w-[450px] h-12 flex justify-center items-center border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-all duration-200 gap-3 mb-8"
             >
                 <img 
                     src="{{ asset('images/facebook.svg') }}" 
