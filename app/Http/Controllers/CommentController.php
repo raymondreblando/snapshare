@@ -19,7 +19,9 @@ class CommentController extends Controller
         $comment = $request->user()->comments()->create($validatedData);
         $snap = $comment->snap;
 
-        $snap->snapable->notify(new UserCommented($snap, $request->user()));
+        if ($snap->snapable->user_id !== $request->user()->user_id) {
+            $snap->snapable->notify(new UserCommented($snap, $request->user()));
+        }
 
         return response()->json([
             'type' => 'success',

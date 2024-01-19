@@ -20,7 +20,9 @@ class ReactController extends Controller
             'snap_id' => $snap->snap_id,
         ]);
 
-        $snap->snapable->notify(new UserReacted($snap, $request->user()));
+        if ($snap->snapable->user_id !== $request->user()->user_id) {
+            $snap->snapable->notify(new UserReacted($snap, $request->user()));
+        }
     }
 
     public function destroy(string $id): void
