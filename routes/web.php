@@ -94,10 +94,7 @@ Route::middleware(['auth', 'revalidate'])->group(function () {
         Route::delete('/follow/page/{id}', 'destroy');
     });
 
-    Route::controller(NotificationController::class)->group(function () {
-        Route::get('/snap/{snap}/{notification_id}', 'snap')->name('notif.snap');
-        Route::get('/snap/{user}/{notification_id}', 'followed')->name('notif.followed');
-    });
+    Route::get('/notification/{notification}', NotificationController::class)->name('notification');
 
     Route::controller(AccountSettingController::class)->group(function () {
         Route::get('/account/setting', 'index')->name('account.setting');

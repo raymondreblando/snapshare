@@ -28,7 +28,7 @@ class UserReacted extends Notification implements ShouldQueue
     {
         return [
             'icon' => 'images/heart.svg',
-            'url' => URL::route('notif.snap', ['snap' => $this->snap, 'notification_id' => $this->id]),
+            'url' => URL::route('snap.show', ['snap' => $this->snap]),
             'message' => $this->reactor->fullname . ' reacted to your snap post',
         ];
     }

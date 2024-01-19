@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SnapRequest;
 use App\Http\Requests\UpdateSnapRequest;
-use App\Models\Page;
 use App\Models\Snap;
 use App\Services\SnapService;
 use App\Services\UploadService;

@@ -28,7 +28,7 @@ class UserCommented extends Notification implements ShouldQueue
     {
         return [
             'icon' => 'images/commented.svg',
-            'url' => URL::route('notif.snap', ['snap' => $this->snap, 'notification_id' => $this->id]),
+            'url' => URL::route('snap.show', ['snap' => $this->snap]),
             'message' => $this->commentor->fullname . ' commented on your snap post',
         ];
     }

@@ -10,7 +10,7 @@
     <ul class="max-h-[calc(100vh-180px)] overflow-y-auto">
         @forelse ($user->notifications as $notification)
             <a 
-                href="{{ $notification['data']['url'] }}"
+                href="{{ route('notification', $notification) }}"
                 @class([
                     'notif', 
                     'unread' => empty($notification['read_at']),

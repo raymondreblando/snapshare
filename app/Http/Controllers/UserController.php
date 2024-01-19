@@ -45,7 +45,8 @@ class UserController extends Controller
     public function myProfile(): View
     {
         $user = Auth::user();
-        $snaps = Auth::user()->snaps()->with('snapable')->latest()->get();
+        // $snaps = Auth::user()->snaps()->with('snapable')->latest()->get();
+        $snaps = Auth::user()->snaps()->latest()->get();
         $followers = Auth::user()->followers()->with('userFollower')->get();
         $followings = Auth::user()->following()->with('userFollowing')->get();
 

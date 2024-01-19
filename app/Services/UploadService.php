@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Services\ResizeImage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UploadService 
 {

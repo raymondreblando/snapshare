@@ -26,7 +26,7 @@ class UserFollowed extends Notification implements ShouldQueue
     {
         return [
             'icon' => 'images/followed.svg',
-            'url' => URL::route('notif.followed', ['user' => $this->follower, 'notification_id' => $this->id]),
+            'url' => URL::route('people.show', ['user' => $this->follower]),
             'message' => $this->follower->fullname . ' followed you',
         ];
     }
