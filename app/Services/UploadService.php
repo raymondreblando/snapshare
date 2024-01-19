@@ -22,10 +22,10 @@ class UploadService
             $filename = $id . ".". $file->getClientOriginalExtension();
 
             if ($type === 'profile') {
-                ResizeImage::resize($file, $resizeImagePath, $filename);
+                ResizeImage::resize($file, $resizeImagePath, $filename, 100);
             } else {
                 $file->storeAs($uploadPath, $filename, 'local');
-                ResizeImage::resize($file, $resizeImagePath, $filename);
+                ResizeImage::resize($file, $resizeImagePath, 'optimize-'.$filename, 20);
             }
 
             $filenames[] = $filename;
