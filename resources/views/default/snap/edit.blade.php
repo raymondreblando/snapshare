@@ -61,10 +61,6 @@
                             <i class="ri-checkbox-circle-fill hidden group-[.active]:block text-base text-emerald-500"></i>
                             Private
                         </div>
-                        <div class="group tickbox @if ($snap->snap_privacy === 'Friends') active @endif" role="button" data-value="Friends">
-                            <i class="ri-checkbox-circle-fill hidden group-[.active]:block text-base text-emerald-500"></i>
-                            Friends
-                        </div>
                         <div class="group tickbox @if ($snap->snap_privacy === 'Public') active @endif" role="button" data-value="Public">
                             <i class="ri-checkbox-circle-fill hidden group-[.active]:block text-base text-emerald-500"></i>
                             Public
