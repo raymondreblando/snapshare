@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Services;
+
+use App\Services\ResizeImage;
 use Illuminate\Http\Request;
-use Spatie\Glide\GlideImage;
 
 class UploadService 
 {
@@ -21,10 +22,10 @@ class UploadService
             $filename = $id . ".". $file->getClientOriginalExtension();
 
             if ($type === 'profile') {
-                GlideImage::create($file)->modify(['w' => 120])->save($resizeImagePath . $filename);
+                ResizeImage::resize($file, $resizeImagePath, $filename);
             } else {
                 $file->storeAs($uploadPath, $filename, 'local');
-                GlideImage::create($file)->modify(['w' => 40])->save($resizeImagePath . 'optimize-' . $filename);
+                ResizeImage::resize($file, $resizeImagePath, $filename);
             }
 
             $filenames[] = $filename;
