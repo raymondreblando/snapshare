@@ -27,7 +27,7 @@ class GoogleSignInController extends Controller
         
         $createdUser = User::create([
             'fullname' => $googleUser->getName(),
-            'username' => $googleUser->getName(),
+            'username' => explode('@', $googleUser->getName())[0],
             'email' => $googleUser->getEmail(),
             'google_id' => $googleUser->getId()
         ]);

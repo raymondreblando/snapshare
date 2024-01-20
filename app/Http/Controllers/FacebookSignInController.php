@@ -27,7 +27,7 @@ class FacebookSignInController extends Controller
         
         $createdUser = User::create([
             'fullname' => $facebookUser->getName(),
-            'username' => $facebookUser->getName(),
+            'username' => explode('@', $facebookUser->getEmail())[0],
             'email'=> $facebookUser->getEmail(),
             'facebook_id' => $facebookUser->getId()
         ]);
